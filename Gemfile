@@ -1,5 +1,7 @@
 source "http://rubygems.org"
-gem "rb-appscript"
 gem "httparty"
 gem "nokogiri"
+gem "rb-appscript"
+
+gem "cucumber"
 gem "rspec", :require => "spec"
