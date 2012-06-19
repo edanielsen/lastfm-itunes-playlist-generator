@@ -13,8 +13,6 @@ class LastFM
 	private
 	def query_by_filter method, filter
 		response = HTTParty.get("http://ws.audioscrobbler.com/2.0/?api_key=af67dd7e43569799e5033f12481b9509&method=#{method}", :query => filter)
-		puts response.inspect
-		puts response.body
 		Nokogiri::XML(CGI::unescapeHTML(response.body))
 	end
 end
